@@ -68,7 +68,7 @@ For more descriptions about the data please visit [2019 Data Science Bowl \| Kag
 **Regression.ipynb**: the second attempt using the regression model
 **Visualization**: where most of the visual in the powerpoint come from
 **Readme.md**
-**Presentation**
+**DataScienceBowl.pptn**: Powerpoint presentation that contain all the result from the start to the latest version.
 
 
 ## Contact
