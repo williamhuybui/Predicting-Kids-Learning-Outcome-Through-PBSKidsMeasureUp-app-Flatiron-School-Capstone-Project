@@ -1,8 +1,9 @@
 # How media can support early childhood learning outcomes.
 
 This project is part of the [Kaggle's 2019 Data Science Bowl](https://www.kaggle.com/c/data-science-bowl-2019)
+Started on November 1st, 2019
 
-#### -- Project Status: [Active, On-Hold, Completed]
+#### -- Project Status: [Active]
 
 ## Project Intro/Objective
 The project comes from PBS KIDS, a trusted name in early childhood education for decades, aims to gain insights into how media can help children learn important skills for success in school and life. In this project, the gameplay data, including knowledge of videos watched and games played, from the PBS KIDS Measure Up! the app, a game-based learning tool developed as a part of the CPB-PBS Ready To Learn Initiative with funding from the U.S, is provided. The purpose is to predict scores on in-game assessments and create an algorithm that will lead to better-designed games and improved learning outcomes.
