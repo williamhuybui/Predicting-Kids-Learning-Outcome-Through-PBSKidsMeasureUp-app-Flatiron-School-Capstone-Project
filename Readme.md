@@ -1,18 +1,14 @@
 # How media can support early childhood learning outcomes.
+![PBS logo](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/Pbskids.png)
 
 This project is part of the [Kaggle's 2019 Data Science Bowl](https://www.kaggle.com/c/data-science-bowl-2019)
 Started on November 1st, 2019
+![Data Science Bolw Logo](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/datascienceBowl.png)
 
 #### -- Project Status: [Active]
 
 ## Project Intro/Objective
 The project comes from PBS KIDS, a trusted name in early childhood education for decades, aims to gain insights into how media can help children learn important skills for success in school and life. In this project, the gameplay data, including knowledge of videos watched and games played, from the PBS KIDS Measure Up! the app, a game-based learning tool developed as a part of the CPB-PBS Ready To Learn Initiative with funding from the U.S, is provided. The purpose is to predict scores on in-game assessments and create an algorithm that will lead to better-designed games and improved learning outcomes.
-
-This is a multiclassification problem with 4 possible outcomes
-3: the assessment was solved on the first attempt
-2: the assessment was solved on the second attempt
-1: the assessment was solved after 3 or more attempts
-0: the assessment was never solved
 
 ### Methods Used
 * **Metric**: [Quadratic Weighted Kappa](https://www.kaggle.com/c/data-science-bowl-2019/overview/evaluation)
@@ -39,9 +35,32 @@ The outcomes in this competition are grouped into 4 groups (labeled accuracy_gro
 1: the assessment was solved after 3 or more attempts
 0: the assessment was never solved
 
+![Group distribution](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/dist_group.png)
+
 For more descriptions about the data please visit [2019 Data Science Bowl \| Kaggle](https://www.kaggle.com/c/data-science-bowl-2019/data).
 
+## Some EDA
+1) There are 5 different assessments. When **assessments are stacked on the accuracy group distribution** we obtain this interesting graph that can descibe the difficulty of each assessment
 
+![Accuracy group count](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/acc_group_count.png)
+
+2) Data was collected in 3 months span from June to October. The **time series by number of hours spent**  provided us some abnomality in late August and Septemper
+
+![hour per datet](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/game_time_date.png)
+
+3) The time zone for each players are not provided. However, the **total hour spend per hour of the day distribution** suggests that most of the players belong to the same region. A further investigation (compare the graph with dota 2 players count) indicate that this region is in fact belong to North America. More about this in the powerpoint.
+
+![Hour per day hour](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/Time_of_a_day.png)
+
+4) Using a classical approach, **classification on a multi-classification problems**, we obtain a comparison between 4 ensemble models. Light GBM and XGBoosts seems to be the best model. However, when ploting the histogram for the test set output, a extreme skewed distribution occur suggests that this is highly overfitting
+
+![Model](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/model.png)
+
+5) Applying tremendous feature engineerings, oversampling techniques, light gbm regression, and optimization rounder, we obtain a **better result** and scored relatively high (top 30%) on Kaggle leaderboard
+
+![Last attemp](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/last_attempt.png)
+
+For more explaination and EDA, please download and open the **powerpoint file**.
 ## Getting Started
 
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
