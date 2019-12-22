@@ -1,5 +1,6 @@
-# How media can support early childhood learning outcomes.
 ![PBS logo](https://github.com/williamhuybui/Predicting-Kids-Learning-Outcome-Through-PBSKidsMeasureUp-app-Flatiron-School-Capstone-Project/blob/master/Picture/Pbskids.png)
+
+# How Media Can Support Early Childhood Learning Outcomes
 
 This project is part of the [Kaggle's 2019 Data Science Bowl](https://www.kaggle.com/c/data-science-bowl-2019)
 Started on November 1st, 2019
